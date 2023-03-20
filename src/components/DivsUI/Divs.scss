@@ -1,0 +1,30 @@
+@import "./../../style/Color_And_Mixin";
+
+#FoundResults
+{
+  @include FlexRowCeCe();
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  > h3
+  {
+    font-family: "PTSasn-Bold";
+  }
+}
+
+#LoadMore
+{
+  @include FlexRowCeCe();
+  height: calc(20vh + 2px);
+  > button
+  {
+    padding: calc(1vw + 2px);
+    background: $Pastel_Orange;
+    border: none;
+    box-shadow: 0.4vw 0.4vw $BlackA;
+    transition: 0.5s background;
+  }
+  > button:hover
+  {
+    background: $Vanilla;
+  }
+}

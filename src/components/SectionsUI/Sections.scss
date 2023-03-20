@@ -1,8 +1,8 @@
 @import "./../../style/Color_And_Mixin";
 
-#FirstSection
+#BooksSection
 {
+  margin-top: calc(30vh + 12px);
   background: $Summer_Sun;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
 }

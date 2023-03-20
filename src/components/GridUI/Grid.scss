@@ -1,0 +1,23 @@
+@import "./../../style/Color_And_Mixin";
+
+#GridBooks
+{
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin-bottom: 2.5vw;
+  width: 100%;
+  display: grid;
+  justify-content: space-evenly;
+  column-gap: 5vmin;
+  row-gap: 5vmin;
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, calc(100px + 21vmin));
+  grid-template-rows: repeat(auto-fit, calc(150px + 21vmin + 10.5vmin));
+  > div
+  {
+    width: calc(100px + 21vmin);
+    height: calc(150px + 21vmin + 10.5vmin);
+    background: $Pastel_Orange;
+  }
+}
+

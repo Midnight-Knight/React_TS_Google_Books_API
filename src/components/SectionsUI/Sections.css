@@ -1,7 +1,7 @@
-#FirstSection {
+#BooksSection {
+  margin-top: calc(30vh + 12px);
   background: rgb(255, 177, 66);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
 }
 
 /*# sourceMappingURL=Sections.css.map */

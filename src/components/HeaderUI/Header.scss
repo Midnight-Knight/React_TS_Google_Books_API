@@ -1,10 +1,14 @@
 @import "./../../style/Color_And_Mixin";
 
 header{
-  background: $Pastel_Orange;
-  position: absolute;
-  width: 100vw;
-  height: 35vh;
+  position: fixed;
+  z-index: 10;
+  background-image: url("./../../image/book.jpg");
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  height: calc(30vh + 12px);
+  box-shadow: 0 0 24px 24px $BlackA;
   @include FlexRowCeCe();
   > div
   {
@@ -23,7 +27,7 @@ header{
         width: 85%;
         background: $Vanilla;
         @include FlexRowFsCe();
-        height: 3vw;
+        height: calc(3vw + 2px);
         > input
         {
           width: 100%;
@@ -67,10 +71,11 @@ header{
             margin-right: 0.5vw;
           }
           > select {
+            text-shadow: none;
             background: $Vanilla;
             border: none;
             margin-left: 0.5vw;
-            width: 15vw;
+            width: calc(15vw + 12px);
           }
           > select:focus {
             outline: none;

@@ -1,7 +1,10 @@
 $Summer_Sun: rgb(255,177,66);
 $Pastel_Orange: rgb(255, 216, 138);
+$Pastel_OrangeA: rgba(255, 216, 138, 0.5);
 $Vanilla: rgb(255, 249, 209);
+$VanillaA: rgba(255, 249, 209, 0.5);
 $Black: rgb(74,74,74);
+$BlackA: rgba(74,74,74,0.5);
 
 @mixin FlexColumnFsCe {
   display: flex;
@@ -39,3 +42,4 @@ $Black: rgb(74,74,74);
   justify-content: flex-start;
   align-items: center;
 }
+
