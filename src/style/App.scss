@@ -1,0 +1,65 @@
+@import "Color_And_Mixin";
+
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1.75vw;
+  font-family: "PTSasn-Bold";
+}
+
+@font-face {
+  font-family: 'Playfair Display Italic';
+  src: url("./fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format('truetype');
+  font-weight: auto;
+  font-style: auto;
+}
+
+@font-face {
+  font-family: 'PTSasn-Bold';
+  src: url("./fonts/PTSans-Bold.ttf") format('truetype');
+  font-weight: auto;
+  font-style: auto;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+  font-family: 'Playfair Display Italic';
+}
+
+h6
+{
+  font-size: 1.75vw;
+}
+
+h5
+{
+  font-size: 2vw;
+}
+
+h4
+{
+  font-size: 2.25vw;
+}
+
+h3
+{
+  font-size: 2.5vw;
+}
+
+h2
+{
+  font-size: 2.75vw;
+}
+
+h1
+{
+  font-size: 3vw;
+}
+
+
+
+.App{
+  @include FlexColumnFsCe();
+}

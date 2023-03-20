@@ -1,0 +1,82 @@
+@import "./../../style/Color_And_Mixin";
+
+header{
+  background: $Pastel_Orange;
+  position: absolute;
+  width: 100vw;
+  height: 35vh;
+  @include FlexRowCeCe();
+  > div
+  {
+    height: 100%;
+    @include FlexColumnSeCe();
+    > h1
+    {
+
+    }
+    > div
+    {
+      height: 15vh;
+      @include FlexColumnSbCe();
+      > #inputDiv
+      {
+        width: 85%;
+        background: $Vanilla;
+        @include FlexRowFsCe();
+        height: 3vw;
+        > input
+        {
+          width: 100%;
+          background: none;
+          border: none;
+          height: 3vw;
+          padding-left: 1vw;
+          padding-right: 0.5vw;
+        }
+        > input:focus
+        {
+          outline: none;
+        }
+        > button
+        {
+          height: 3vw;
+          width: 3vw;
+          background: none;
+          border: none;
+          @include FlexRowCeCe();
+          > div
+          {
+            width: 2vw;
+            height: 2vw;
+            background-image: url("./../../svg/search-svgrepo-com.svg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      > div
+      {
+        @include FlexRowCeCe();
+        > div
+        {
+          margin-left: 1vw;
+          margin-right: 1vw;
+          @include FlexRowCeCe();
+          > p {
+            margin-right: 0.5vw;
+          }
+          > select {
+            background: $Vanilla;
+            border: none;
+            margin-left: 0.5vw;
+            width: 15vw;
+          }
+          > select:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}

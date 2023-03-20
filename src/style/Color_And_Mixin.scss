@@ -1,0 +1,41 @@
+$Summer_Sun: rgb(255,177,66);
+$Pastel_Orange: rgb(255, 216, 138);
+$Vanilla: rgb(255, 249, 209);
+$Black: rgb(74,74,74);
+
+@mixin FlexColumnFsCe {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin FlexColumnSeCe{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@mixin FlexColumnSbCe{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin FlexRowCeCe
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin FlexRowFsCe()
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
