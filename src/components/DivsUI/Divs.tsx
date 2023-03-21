@@ -23,7 +23,7 @@ export const LoadMore:React.FC = () => {
 };
 export const BookCard: React.FC<Book> = (props) => {
     return (
-        <div>
+        <div className="BookCard">
             <div>
                 <img alt={"book_"}/>
             </div>
@@ -33,5 +33,11 @@ export const BookCard: React.FC<Book> = (props) => {
                 <p className="authors_book"></p>
             </div>
         </div>
+    );
+};
+
+export const BackgroundBlock:React.FC = () => {
+    return(
+        <div id="BackgroundBlock"></div>
     );
 };

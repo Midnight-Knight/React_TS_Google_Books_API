@@ -1,6 +1,6 @@
 #BooksSection {
-  margin-top: calc(30vh + 12px);
-  background: rgb(255, 177, 66);
+  z-index: 2;
+  margin-top: calc(20vh + 12px);
   width: 100%;
 }
 

@@ -3,20 +3,19 @@
 header{
   position: fixed;
   z-index: 10;
-  background-image: url("./../../image/book.jpg");
-  background-size: cover;
-  background-position: top;
+  background: $Cornflower;
   width: 100%;
-  height: calc(30vh + 12px);
+  height: calc(20vh + 12px);
   box-shadow: 0 0 24px 24px $BlackA;
   @include FlexRowCeCe();
   > div
   {
     height: 100%;
-    @include FlexColumnSeCe();
+    width: 100%;
+    @include FlexRowSeCe();
     > h1
     {
-
+      color: $UpWhite;
     }
     > div
     {
@@ -25,9 +24,11 @@ header{
       > #inputDiv
       {
         width: 85%;
-        background: $Vanilla;
+        background: $UpWhite;
+        box-shadow: 0 0 0.5vw 0.5vw $UpWhiteA;
         @include FlexRowFsCe();
         height: calc(3vw + 2px);
+        border-radius: 1vw;
         > input
         {
           width: 100%;
@@ -66,13 +67,16 @@ header{
         {
           margin-left: 1vw;
           margin-right: 1vw;
-          @include FlexRowCeCe();
+          @include FlexColumnCeCe();
           > p {
-            margin-right: 0.5vw;
+            margin-top: 1.25vw;
+            margin-bottom: 0.25vw;
+            color: $UpWhite;
           }
           > select {
-            text-shadow: none;
-            background: $Vanilla;
+            border-radius: 1vw;
+            background: $UpWhite;
+            box-shadow: 0 0 0.5vw 0.5vw $UpWhiteA;
             border: none;
             margin-left: 0.5vw;
             width: calc(15vw + 12px);

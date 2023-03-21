@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["Grid.scss","../../style/Color_And_Mixin.scss"],"names":[],"mappings":"AAEA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;EAEE;EACA;EACA,YClBY","file":"Grid.css"}
+{"version":3,"sourceRoot":"","sources":["Grid.scss","../../style/Color_And_Mixin.scss"],"names":[],"mappings":"AAEA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;EAEE;EACA;ECLF;EACA;EDME;EACA;EACA","file":"Grid.css"}
