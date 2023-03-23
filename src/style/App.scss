@@ -60,5 +60,6 @@ h1
 }
 
 .App{
+  min-height: 100vh;
   @include FlexColumnFsCe();
 }

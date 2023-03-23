@@ -3,7 +3,7 @@
 header{
   position: fixed;
   z-index: 10;
-  background: $Cornflower;
+  background: $Moderate_orange;
   width: 100%;
   height: calc(20vh + 12px);
   box-shadow: 0 0 24px 24px $BlackA;
@@ -15,7 +15,7 @@ header{
     @include FlexRowSeCe();
     > h1
     {
-      color: $UpWhite;
+      color: $White;
     }
     > div
     {
@@ -24,11 +24,10 @@ header{
       > #inputDiv
       {
         width: 85%;
-        background: $UpWhite;
-        box-shadow: 0 0 0.5vw 0.5vw $UpWhiteA;
+        background: $White;
+        box-shadow: 0 0 0.5vw 0.5vw $WhiteA;
         @include FlexRowFsCe();
         height: calc(3vw + 2px);
-        border-radius: 1vw;
         > input
         {
           width: 100%;
@@ -65,20 +64,18 @@ header{
         @include FlexRowCeCe();
         > div
         {
-          margin-left: 1vw;
-          margin-right: 1vw;
+          margin-left: 2vw;
+          margin-right: 2vw;
           @include FlexColumnCeCe();
           > p {
-            margin-top: 1.25vw;
-            margin-bottom: 0.25vw;
-            color: $UpWhite;
+            margin-top: 1vw;
+            margin-bottom: 0.5vw;
+            color: $White;
           }
           > select {
-            border-radius: 1vw;
-            background: $UpWhite;
-            box-shadow: 0 0 0.5vw 0.5vw $UpWhiteA;
+            background: $White;
+            box-shadow: 0 0 0.5vw 0.5vw $WhiteA;
             border: none;
-            margin-left: 0.5vw;
             width: calc(15vw + 12px);
           }
           > select:focus {

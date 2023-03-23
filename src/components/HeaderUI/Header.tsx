@@ -1,34 +1,55 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Header.css";
+import {searchBooks} from "../../logic/Books/BooksManager";
+import { useDispatch } from "react-redux";
+import {updateData} from "../../action";
 
 export const Header = () => {
+    const [title,bookNameFunction] = useState<string>('js');
+    const [category,categoryFunction] = useState<string>('all');
+    const [sortBy,sortOrderFunction] = useState<string>('relevance');
+
+    const dispatch = useDispatch();
+
+    const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+
+        const searchParams = {
+            title,
+            category,
+            sortBy,
+        };
+
+        dispatch(updateData(searchParams));
+    };
+
     return (
         <header>
             <div>
                 <h1>Search for books</h1>
                 <div>
                     <div id="inputDiv">
-                        <input type="text"/>
-                        <button><div></div></button>
+                        <input onChange={(e) => bookNameFunction(e.target.value)} type="text"/>
+                        <button onClick={handleSubmit}><div></div></button>
                     </div>
                     <div>
                         <div>
                             <p>Categories</p>
-                            <select>
-                                <option>all</option>
-                                <option>art</option>
-                                <option>biography</option>
-                                <option>computers</option>
-                                <option>history</option>
-                                <option>medical</option>
-                                <option>poetry</option>
+                            <select onChange={(e) => categoryFunction(e.target.value)} id="Categories">
+                                <option value="all">all</option>
+                                <option value="art">art</option>
+                                <option value="biography">biography</option>
+                                <option value="computers">computers</option>
+                                <option value="history">history</option>
+                                <option value="medical">medical</option>
+                                <option value="poetry">poetry</option>
                             </select>
                         </div>
                         <div>
                             <p>Sorting by</p>
-                            <select>
-                                <option>relevance</option>
-                                <option>newest</option>
+                            <select onChange={(e) =>  sortOrderFunction(e.target.value)} id="Sorting">
+                                <option value="relevance">relevance</option>
+                                <option value="newest">newest</option>
                             </select>
                         </div>
                     </div>

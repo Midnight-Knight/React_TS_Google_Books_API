@@ -1,6 +1,7 @@
 export interface Book{
-    categories: string;
     name_book: string;
     image_book: string;
+    categories: string[];
     array_authors:string[];
+    description:string;
 }

@@ -1,13 +1,17 @@
-$UpWhite: rgb(236, 252, 255);
-$UpWhiteA: rgba(236, 252, 255, 0.5);
+$Orange: rgb(212, 129, 40);
+$Moderate_orange: rgb(236, 129, 62);
+$Moderate_orangeA: rgba(236, 129, 62, 0.5);
+$Rich_red-brown: rgb(129, 32, 12);
+$Rich_red-brownA: rgba(129, 32, 12, 0.5);
+$Light_brown: rgb(154, 121, 82);
+$Grey_Silk: rgb(207, 196, 168);
+$Grey_SilkA: rgba(207, 196, 168, 0.5);
+$Grayish_brown: rgb(92, 71, 47);
 $White: rgb(223,223,223);
-$Black: rgb(32,32,32);
-$BlackA: rgba(32,32,32,0.5);
-$Amethyst: rgb(136, 96, 208);
-$Periwinkle_Crayola: rgb(193,200,228);
-$Cornflower_Blue: rgb(90,185,234);
-$City_Sky: rgb(132,206,235);
-$Cornflower: rgb(86,128,233);
+$WhiteA: rgba(223,223,223,0.5);
+$Gray: rgb(112,112,122);
+$Black: rgb(31,31,31);
+$BlackA: rgba(31,31,31,0.5);
 
 @mixin blur($value: 6px)
 {
@@ -27,6 +31,13 @@ $Cornflower: rgb(86,128,233);
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+@mixin FlexColumnSbFs{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 @mixin FlexColumnSbCe{

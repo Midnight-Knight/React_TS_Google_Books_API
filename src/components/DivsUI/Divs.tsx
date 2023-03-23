@@ -21,16 +21,16 @@ export const LoadMore:React.FC = () => {
         </div>
     );
 };
-export const BookCard: React.FC<Book> = (props) => {
+export const BookCard:React.FC<Book> = (props) => {
     return (
         <div className="BookCard">
             <div>
-                <img alt={"book_"}/>
+                <img src={props.image_book} alt={"book_"+props.name_book}/>
             </div>
             <div>
-                <p className="categories"></p>
-                <h6 className="name_book"></h6>
-                <p className="authors_book"></p>
+                <p className="categories">{props.categories && props.categories.length > 0 ? props.categories[0] : "Unknown category"}</p>
+                <h6 className="name_book">{props.name_book}</h6>
+                <p className="authors_book">{props.array_authors && props.array_authors.length > 0 ? props.array_authors.join(', ') : 'Unknown author'}</p>
             </div>
         </div>
     );

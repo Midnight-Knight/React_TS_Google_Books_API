@@ -1,10 +1,10 @@
 header {
   position: fixed;
   z-index: 10;
-  background: rgb(86, 128, 233);
+  background: rgb(236, 129, 62);
   width: 100%;
   height: calc(20vh + 12px);
-  box-shadow: 0 0 24px 24px rgba(32, 32, 32, 0.5);
+  box-shadow: 0 0 24px 24px rgba(31, 31, 31, 0.5);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -19,7 +19,7 @@ header > div {
   align-items: center;
 }
 header > div > h1 {
-  color: rgb(236, 252, 255);
+  color: rgb(223, 223, 223);
 }
 header > div > div {
   height: 15vh;
@@ -30,14 +30,13 @@ header > div > div {
 }
 header > div > div > #inputDiv {
   width: 85%;
-  background: rgb(236, 252, 255);
-  box-shadow: 0 0 0.5vw 0.5vw rgba(236, 252, 255, 0.5);
+  background: rgb(223, 223, 223);
+  box-shadow: 0 0 0.5vw 0.5vw rgba(223, 223, 223, 0.5);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   height: calc(3vw + 2px);
-  border-radius: 1vw;
 }
 header > div > div > #inputDiv > input {
   width: 100%;
@@ -75,24 +74,22 @@ header > div > div > div {
   align-items: center;
 }
 header > div > div > div > div {
-  margin-left: 1vw;
-  margin-right: 1vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 header > div > div > div > div > p {
-  margin-top: 1.25vw;
-  margin-bottom: 0.25vw;
-  color: rgb(236, 252, 255);
+  margin-top: 1vw;
+  margin-bottom: 0.5vw;
+  color: rgb(223, 223, 223);
 }
 header > div > div > div > div > select {
-  border-radius: 1vw;
-  background: rgb(236, 252, 255);
-  box-shadow: 0 0 0.5vw 0.5vw rgba(236, 252, 255, 0.5);
+  background: rgb(223, 223, 223);
+  box-shadow: 0 0 0.5vw 0.5vw rgba(223, 223, 223, 0.5);
   border: none;
-  margin-left: 0.5vw;
   width: calc(15vw + 12px);
 }
 header > div > div > div > div > select:focus {
