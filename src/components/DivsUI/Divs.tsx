@@ -1,20 +1,30 @@
 import React from "react";
 import {Book} from "../../logic/Books/Books";
 import "./Divs.css";
+import {useSelector} from "react-redux";
+import {MyState} from "../../Reducer";
 
-interface FoundResultsProps {
-    NumberOfResults: number;
-}
 
-export const FoundResults:React.FC<FoundResultsProps> = ({NumberOfResults}) => {
+
+export const FoundResults:React.FC = () => {
+    const numberParam:any = useSelector((state: MyState) => state.number);
+    if (!numberParam)
+    {
+        return (
+            <div id="FoundResults">
+                <h3>Found 0 results</h3>
+            </div>
+        );
+    }
     return (
         <div id="FoundResults">
-            <h3>Found {NumberOfResults} results</h3>
+            <h3>Found {numberParam.number} results</h3>
         </div>
     );
 };
 
 export const LoadMore:React.FC = () => {
+
     return (
         <div id="LoadMore">
             <button>Load More</button>
@@ -22,10 +32,15 @@ export const LoadMore:React.FC = () => {
     );
 };
 export const BookCard:React.FC<Book> = (props) => {
+    let imgP:string = "./../../image/free-icon-no-pictures-3875148.png"
+    if (props.image_book !== "")
+    {
+        imgP = props.image_book;
+    }
     return (
         <div className="BookCard">
             <div>
-                <img src={props.image_book} alt={"book_"+props.name_book}/>
+                <img src={imgP} alt={"book_"+props.name_book}/>
             </div>
             <div>
                 <p className="categories">{props.categories && props.categories.length > 0 ? props.categories[0] : "Unknown category"}</p>

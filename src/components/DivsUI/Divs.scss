@@ -16,6 +16,8 @@
 {
   @include FlexRowCeCe();
   height: calc(20vh + 2px);
+  position: relative;
+  bottom: 0;
   > button
   {
     padding: calc(1vw + 2px);
@@ -41,7 +43,7 @@
     {
       height: 90%;
       box-shadow: calc(0.75vw + 5px) calc(0.75vw + 5px) $BlackA;
-      background: red;
+      background: $Orange;
     }
   }
   > div:nth-child(2)
@@ -50,7 +52,7 @@
     height: 50%;
     > *
     {
-      font-size: calc(1vw + 8px);
+      font-size: calc(1vmax + 8px);
       color: $White;
       text-shadow: 2px 3px 4px $BlackA;
     }

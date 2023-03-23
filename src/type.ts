@@ -3,3 +3,7 @@ export interface Data {
     category: string;
     sortBy: string;
 }
+
+export interface NumberOfResults {
+    number: number;
+}

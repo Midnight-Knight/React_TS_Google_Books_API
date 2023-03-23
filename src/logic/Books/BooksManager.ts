@@ -1,7 +1,3 @@
-import React from "react";
-import {Book} from "./Books";
-import {BookCard, LoadMore} from "../../components/DivsUI/Divs";
-
 import axios from 'axios';
 const API_URL:string = "https://www.googleapis.com/books/v1/";
 const API_KEY:string = "AIzaSyDx-dY3gLgjWubHaZpAEh6l-iLSLNSDEKI";
@@ -16,7 +12,6 @@ const API = axios.create({
 // orderBy=relevance orderBy=newest сортировка
 // subject all art biography computers history medical poetry категория
 export const searchBooks:any = async (query: string = "js", subject:string = "", orderBy:string = "relevance", loadMore:boolean = false) => {
-
     let STR_URL:string = 'volumes?q=';
     switch (subject)
     {
@@ -29,7 +24,6 @@ export const searchBooks:any = async (query: string = "js", subject:string = "",
     }
     const response = await API.get(STR_URL);
     API_END_INDEX = response.data.totalItems;
-    console.log(API_END_INDEX);
     return response.data;
 };
 

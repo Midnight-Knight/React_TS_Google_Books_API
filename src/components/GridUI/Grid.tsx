@@ -1,15 +1,17 @@
 import React, {useEffect, useState} from "react";
-import { useSelector } from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import "./Grid.css";
 import {BookCard} from "../DivsUI/Divs";
 import {Book} from "../../logic/Books/Books";
 import {searchBooks} from "../../logic/Books/BooksManager";
 import {MyState} from "../../Reducer";
+import {UpdateNumberOfResults} from "../../action";
 
 export const GridBooks:React.FC = () => {
         const [books, setBooks] = useState<Book[]>([]);
         const searchParams:any = useSelector((state: MyState) => state.data);
         const [API_data, setAPI_data] = useState<any>(null);
+    const dispatch = useDispatch();
 
         useEffect(() => {
             if (!searchParams) {
@@ -41,9 +43,14 @@ export const GridBooks:React.FC = () => {
                         )
                 }
                 setBooks(BookData);
+                const number:number = API_data.totalItems;
+                const numberParam = {
+                    number,
+                };
+
+                dispatch(UpdateNumberOfResults(numberParam));
             }
         }, [API_data]);
-
         return (
             <div id="GridBooks">
                     {books.map((book:Book,index:number) => (
