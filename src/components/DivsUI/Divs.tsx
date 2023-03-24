@@ -3,12 +3,20 @@ import {Book} from "../../logic/Books/Books";
 import "./Divs.css";
 import {useDispatch, useSelector} from "react-redux";
 import {MyState} from "../../Reducer";
-import {UpdateBookBlockAction, updateData, UpdateUpdateBook, UpdateUpdateBookBlock} from "../../action";
+import {UpdateUpdateBook, UpdateUpdateBookBlock} from "../../action";
 import imagineNo from "../../assets/free-icon-no-pictures-3875148.png";
 
 
 export const FoundResults:React.FC = () => {
     const numberParam:any = useSelector((state: MyState) => state.number);
+    useEffect(() => {
+        const x:any = document.getElementById('BlockLoad');
+        if (x)
+        {
+            setTimeout(() => {x.style.opacity = "0";}, 1000);
+            setTimeout(() => {x.style.transform = "translateX(100vw)";}, 1500);
+        }
+    }, [numberParam])
     if (!numberParam)
     {
         return (
@@ -32,7 +40,12 @@ export const LoadMore:React.FC = () => {
         const booleanLoadMore = {
             boolean,
         };
-
+        const x:any = document.getElementById('BlockLoad');
+        if (x)
+        {
+            x.style.transform = "translateX(0)";
+            x.style.opacity = "1";
+        }
         dispatch(UpdateUpdateBook(booleanLoadMore));
     };
 
@@ -82,18 +95,30 @@ export const BlockBook: React.FC = () => {
     const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         const x: any = document.querySelector("html");
+        const y:any = document.getElementById('BlockLoad');
         x.style.overflowY = "overlay";
-        if (element)
+        if (element && y)
         {
-            element.style.transform = "translateX(-100%)";
+            y.style.transform = "translateX(0)";
+            y.style.opacity = "1";
+            setTimeout(() => {element.style.opacity = "0";}, 500)
+            setTimeout(() => {element.style.transform = "translateX(-100%)";}, 500);
+            setTimeout(() => {y.style.opacity = "0";}, 1500);
+            setTimeout(() => {y.style.transform = "translateX(-100vw)";}, 2000);
         }
     };
 
     useEffect(() => {
         if (redux && element) {
             const x: any = document.querySelector("html");
+            const y:any = document.getElementById('BlockLoad');
+            y.style.transform = "translateX(0)";
+            y.style.opacity = "1";
             x.style.overflowY = "hidden";
             element.style.transform = "translateX(0)";
+            element.style.opacity = "1";
+            setTimeout(() => {y.style.opacity = "0";}, 1500);
+            setTimeout(() => {y.style.transform = "translateX(-100vw)";}, 2000);
         }
     }, [redux, element]);
 

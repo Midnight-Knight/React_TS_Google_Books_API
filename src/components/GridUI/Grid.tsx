@@ -19,6 +19,12 @@ export const GridBooks:React.FC = () => {
             if (!searchParams) {
                 return;
             }
+            const x:any = document.getElementById('BlockLoad');
+            if (x)
+            {
+                x.style.transform = "translateX(0)";
+                x.style.opacity = "1";
+            }
             async function fetchBooks() {
                 const data = await searchBooks(searchParams.title,searchParams.category,searchParams.sortBy);
                 setAPI_data(data);
@@ -80,7 +86,6 @@ export const GridBooks:React.FC = () => {
 
             dispatch(UpdateNumberOfResults(numberParam));
         }, [books])
-
         return (
             <div id="GridBooks">
                     {books.map((book:Book,index:number) => (

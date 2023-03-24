@@ -28,7 +28,6 @@ export const Header = () => {
             category,
             sortBy,
         };
-
         dispatch(updateData(searchParams));
         let LoadMore:any = document.getElementById('ButtonLoadMore');
         let BooksSection:any = document.getElementById('BooksSection');

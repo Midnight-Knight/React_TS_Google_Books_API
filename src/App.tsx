@@ -2,10 +2,9 @@ import React from 'react';
 import "./style/App.css";
 import "./fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf";
 import "./fonts/PTSans-Bold.ttf";
-import {useDispatch} from "react-redux";
 import {BooksSections} from "./components/SectionsUI/Sections";
 import {Header} from "./components/HeaderUI/Header";
-import {BackgroundBlock, BlockBook} from "./components/DivsUI/Divs";
+import {BackgroundBlock, BlockBook, DivLoading} from "./components/DivsUI/Divs";
 
 
 function App() {
@@ -15,6 +14,7 @@ function App() {
             <BooksSections/>
             <BackgroundBlock/>
             <BlockBook/>
+            <DivLoading/>
         </div>
     );
 }

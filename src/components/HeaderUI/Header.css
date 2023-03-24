@@ -1,6 +1,6 @@
 header {
   position: fixed;
-  z-index: 9;
+  z-index: 8;
   background: rgb(31, 31, 31);
   width: 100%;
   height: calc(20vh + 12px);
