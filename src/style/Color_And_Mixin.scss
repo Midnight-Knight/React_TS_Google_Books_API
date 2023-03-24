@@ -9,8 +9,10 @@ $Grey_SilkA: rgba(207, 196, 168, 0.5);
 $Grayish_brown: rgb(92, 71, 47);
 $White: rgb(223,223,223);
 $WhiteA: rgba(223,223,223,0.5);
-$Gray: rgb(112,112,122);
+$Gray: rgb(223-16,223-16,223-16);
 $Black: rgb(31,31,31);
+$BlackGray: rgb(31+32,31+32,31+32);
+$BlackSuperGray: rgb(31+80,31+80,31+80);
 $BlackA: rgba(31,31,31,0.5);
 
 @mixin blur($value: 6px)

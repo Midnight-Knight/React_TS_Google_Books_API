@@ -8,7 +8,7 @@
   > h3
   {
     font-family: "PTSasn-Bold";
-    color: $White;
+    color: $Black;
   }
 }
 
@@ -21,8 +21,7 @@
   > button
   {
     padding: calc(1vw + 2px);
-    background: $Moderate_orange;
-    box-shadow: 0 0 0.5vw 0.5vw $Moderate_orangeA;
+    background: $Black;
     border: none;
     color: $White;
     opacity: 0;
@@ -44,7 +43,7 @@
     {
       height: 90%;
       box-shadow: calc(0.75vw + 5px) calc(0.75vw + 5px) $BlackA;
-      background-color: $Moderate_orange;
+      background-color: $Black;
     }
   }
   > div:nth-child(2)
@@ -54,15 +53,21 @@
     > *
     {
       font-size: calc(1vmax + 8px);
-      color: $White;
       text-shadow: 2px 3px 4px $BlackA;
+    }
+    > p
+    {
+      color: $BlackSuperGray;
+      text-shadow: none;
+    }
+    > p:nth-child(1)
+    {
+      margin-bottom: 8px;
     }
     > h6
     {
-      margin-top: 8px;
       margin-bottom: 8px;
       font-family: PTSasn-Bold;
-      color: $Moderate_orange;
     }
   }
 }
@@ -78,16 +83,17 @@
   transform: translateX(-100%);
   transition: 1s transform;
   @include FlexRowFsCe();
+  border-right: 0.15vw solid $Black;
   > div:nth-child(1)
   {
-    background: $Rich_red-brown;
+    background: $White;
     width: 40%;
     height: 100%;
     @include FlexColumnCeCe();
     > img
     {
       height: 70%;
-      background: $Moderate_orange;
+      background: $Black;
       box-shadow: calc(2vw + 5px) calc(2vw + 5px) $BlackA;
     }
   }
@@ -95,7 +101,7 @@
   {
     padding: 5%;
     @include FlexColumnSeFs();
-    background: $Orange;
+    background: $Gray;
     width: 60%;
     height: 100%;
     > div:nth-child(1)
@@ -103,6 +109,11 @@
       > *
       {
         text-align: left;
+      }
+      > p
+      {
+        color: $BlackSuperGray;
+        text-shadow: none;
       }
       > h5
       {
@@ -114,7 +125,7 @@
     {
       margin-bottom: 2.5vw;
       margin-top: 2.5vw;
-      background: $Moderate_orange;
+      background: $White;
       width: 100%;
       overflow-y: scroll;
       height: auto;
@@ -136,7 +147,7 @@
       {
         width: 10vw;
         height: 5vw;
-        background-color: $Rich_red-brown;
+        background-color: $Black;
         background-image: url("./../../assets/free-icon-back-3114883.png");
         background-size: contain;
         background-position: center;

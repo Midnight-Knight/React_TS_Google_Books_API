@@ -46,7 +46,8 @@ export const BookCard:React.FC<Book> = (props) => {
     const dispatch = useDispatch();
     const handleSubmit = (e: React.MouseEvent<HTMLDivElement>) => {
         e.preventDefault();
-        dispatch(UpdateUpdateBookBlock(props));
+        const updatedBook = {...props};
+        dispatch(UpdateUpdateBookBlock(updatedBook));
     };
 
     let imgP:any = imagineNo;
@@ -60,7 +61,7 @@ export const BookCard:React.FC<Book> = (props) => {
                 <img src={imgP} alt={"book_"+props.name_book}/>
             </div>
             <div>
-                <p className="categories">{props.categories && props.categories.length > 0 ? props.categories[0] : ""}</p>
+                <p className="categories">{(props.categories && props.categories.length > 0 ? props.categories[0] : "")}</p>
                 <h6 className="name_book">{props.name_book}</h6>
                 <p className="authors_book">{props.array_authors && props.array_authors.length > 0 ? props.array_authors.join(', ') : ''}</p>
             </div>
@@ -139,6 +140,14 @@ export const BlockBook: React.FC = () => {
 };
 
 export const DivLoading = () => {
-    
+    return (
+        <div id="BlockLoad">
+            <div id="SquareLoad">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    );
 }
 

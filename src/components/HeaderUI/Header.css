@@ -1,7 +1,7 @@
 header {
   position: fixed;
   z-index: 9;
-  background: rgb(236, 129, 62);
+  background: rgb(31, 31, 31);
   width: 100%;
   height: calc(20vh + 12px);
   box-shadow: 0 0 24px 24px rgba(31, 31, 31, 0.5);
