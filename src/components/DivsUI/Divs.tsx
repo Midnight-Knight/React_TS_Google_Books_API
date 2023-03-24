@@ -115,8 +115,8 @@ export const BlockBook: React.FC = () => {
             y.style.transform = "translateX(0)";
             y.style.opacity = "1";
             x.style.overflowY = "hidden";
-            element.style.transform = "translateX(0)";
-            element.style.opacity = "1";
+            setTimeout(() => {element.style.transform = "translateX(0)";}, 1000);
+            setTimeout(() => {element.style.opacity = "1";}, 1000);
             setTimeout(() => {y.style.opacity = "0";}, 1500);
             setTimeout(() => {y.style.transform = "translateX(-100vw)";}, 2000);
         }
