@@ -5,7 +5,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-size: calc(1.75vw + 2px);
+  font-size: calc(1.5vw + 2px);
   font-family: "PTSasn-Bold";
   text-shadow: 2px 3px 4px rgba(74,74,74,0.7);
 }
@@ -24,39 +24,53 @@
   font-style: auto;
 }
 
-h1,h2,h3,h4,h5,h6
+html
 {
-  font-family: 'Playfair Display Italic';
+  overflow-y: overlay;
+}
+
+::-webkit-scrollbar {
+  width: 1vw; /* Ширина полосы */
+  background-color: rgba(0,0,0,0); /* Цвет фона */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $Rich_red-brown;
+}
+
+/* Создание стиля для трека */
+::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0); /* Цвет трека */
 }
 
 h6
 {
-  font-size: calc(1.75vw + 2px);
+  font-size: calc(1.5vw + 2px);
 }
 
 h5
 {
-  font-size: calc(2vw + 4px);
+  font-size: calc(1.75vw + 4px);
 }
 
 h4
 {
-  font-size: calc(2.25vw + 6px);
+  font-size: calc(2vw + 6px);
 }
 
 h3
 {
-  font-size: calc(2.5vw + 8px);
+  font-size: calc(2.25vw + 8px);
 }
 
 h2
 {
-  font-size: calc(2.75vw + 10px);
+  font-size: calc(2.5vw + 10px);
 }
 
 h1
 {
-  font-size: calc(3vw + 12px);
+  font-size: calc(2.75vw + 12px);
 }
 
 body
@@ -66,4 +80,5 @@ body
 
 .App{
   @include FlexColumnFsCe();
+  overflow: hidden;
 }

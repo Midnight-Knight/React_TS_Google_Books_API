@@ -1,4 +1,5 @@
 import {Data, NumberOfResults, UpdateBook} from "./type";
+import {Book} from "./logic/Books/Books";
 
 export interface UpdateDataAction {
     type: 'UPDATE_DATA';
@@ -13,6 +14,11 @@ export interface UpdateNumberOfResultsAction {
 export interface UpdateBookAction {
     type: 'UPDATE_BOOK';
     payload: UpdateBook;
+}
+
+export interface UpdateBookBlockAction {
+    type: 'UPDATE_BOOK_BLOCK';
+    payload: Book;
 }
 
 export const updateData = (data: Data): UpdateDataAction => {
@@ -33,5 +39,12 @@ export const UpdateUpdateBook = (boolean: UpdateBook): UpdateBookAction => {
     return {
         type: 'UPDATE_BOOK',
         payload: boolean,
+    }
+}
+
+export const UpdateUpdateBookBlock = (book: Book): UpdateBookBlockAction => {
+    return {
+        type: 'UPDATE_BOOK_BLOCK',
+        payload: book,
     }
 }

@@ -17,6 +17,7 @@ export function get_api_start_index():number
 // orderBy: relevance newest сортировка
 // subject: all(all "" default) art biography computers history medical poetry категория
 export const searchBooks:any = async (query: string = "js", subject:string = "", orderBy:string = "relevance", loadMore:boolean = false) => {
+    query = query.replaceAll(" ", "+");
     let STR_URL:string = 'volumes?q=';
     let max_results:number = 30;
     switch (loadMore)

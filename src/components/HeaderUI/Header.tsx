@@ -12,7 +12,17 @@ export const Header = () => {
 
     const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
+        Enter();
+    };
 
+    const handleSubmitKey = (event: React.KeyboardEvent<HTMLInputElement>) => {
+        if (event.key === 'Enter') {
+            Enter();
+        }
+    };
+
+    function Enter()
+    {
         const searchParams = {
             title,
             category,
@@ -24,7 +34,7 @@ export const Header = () => {
         let BooksSection:any = document.getElementById('BooksSection');
         LoadMore.style.opacity = '1';
         BooksSection.style.position = 'static';
-    };
+    }
 
     return (
         <header>
@@ -32,7 +42,7 @@ export const Header = () => {
                 <h1>Search for books</h1>
                 <div>
                     <div id="inputDiv">
-                        <input onChange={(e) => bookNameFunction(e.target.value)} type="text"/>
+                        <input onChange={(e) => bookNameFunction(e.target.value)} onKeyDown={handleSubmitKey} type="text"/>
                         <button onClick={handleSubmit}><div></div></button>
                     </div>
                     <div>

@@ -66,3 +66,83 @@
     }
   }
 }
+
+#BlockBook
+{
+  z-index: 3;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 80%;
+  width: 100%;
+  transform: translateX(-100%);
+  transition: 1s transform;
+  @include FlexRowFsCe();
+  > div:nth-child(1)
+  {
+    background: $Rich_red-brown;
+    width: 40%;
+    height: 100%;
+    @include FlexColumnCeCe();
+    > img
+    {
+      height: 70%;
+      background: $Moderate_orange;
+      box-shadow: calc(2vw + 5px) calc(2vw + 5px) $BlackA;
+    }
+  }
+  > div:nth-child(2)
+  {
+    padding: 5%;
+    @include FlexColumnSeFs();
+    background: $Orange;
+    width: 60%;
+    height: 100%;
+    > div:nth-child(1)
+    {
+      > *
+      {
+        text-align: left;
+      }
+      > h5
+      {
+        margin-bottom: calc(0.5vw + 2px);
+        margin-top: calc(0.5vw + 2px);
+      }
+    }
+    > div:nth-child(2)
+    {
+      margin-bottom: 2.5vw;
+      margin-top: 2.5vw;
+      background: $Moderate_orange;
+      width: 100%;
+      overflow-y: scroll;
+      height: auto;
+      border: calc(0.15vw + 2px) solid $Black;
+      box-shadow: calc(1.5vw + 5px) calc(1.5vw + 5px) $BlackA;
+      > p
+      {
+        height: auto;
+        padding: 1.5%;
+        width: 100%;
+      }
+    }
+    > div:nth-child(3)
+    {
+      width: 100%;
+      height: 5vw;
+      @include FlexRowFeCe();
+      > button
+      {
+        width: 10vw;
+        height: 5vw;
+        background-color: $Rich_red-brown;
+        background-image: url("./../../assets/free-icon-back-3114883.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: none;
+      }
+    }
+  }
+}
