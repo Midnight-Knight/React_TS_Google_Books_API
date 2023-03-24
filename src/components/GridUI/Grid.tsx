@@ -25,6 +25,12 @@ export const GridBooks:React.FC = () => {
                 x.style.transform = "translateX(0)";
                 x.style.opacity = "1";
             }
+            const y:any = document.getElementById('BlockBook');
+            if (y)
+            {
+                setTimeout(() => {y.style.opacity = "0";}, 500);
+                setTimeout(() => {y.style.transform = "translateX(-100vw)";}, 500);
+            }
             async function fetchBooks() {
                 const data = await searchBooks(searchParams.title,searchParams.category,searchParams.sortBy);
                 setAPI_data(data);

@@ -84,3 +84,59 @@ header{
     }
   }
 }
+
+@media screen and (orientation: portrait)
+{
+  header {
+    > div {
+      @include FlexColumnCeCe();
+
+      > div {
+        @include FlexColumnCeCe();
+
+        > #inputDiv {
+          height: calc(3vw * 2 + 2px * 2);
+
+          > input {
+            height: 6vw;
+            padding-left: 2vw;
+            padding-right: 1vw;
+          }
+
+          > button {
+            height: 6vw;
+            width: 6vw;
+
+            > div {
+              width: 4vw;
+              height: 4vw;
+            }
+          }
+        }
+
+        > div {
+          > div {
+            margin-left: 4vw;
+            margin-right: 4vw;
+
+            > p {
+              margin-top: 2vw;
+              margin-bottom: 1vw;
+              color: $White;
+            }
+
+            > select {
+              background: $White;
+              border: none;
+              width: calc(30vw + 24px);
+            }
+
+            > select:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

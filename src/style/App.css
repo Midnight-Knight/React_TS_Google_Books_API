@@ -22,6 +22,8 @@
 }
 html {
   overflow-y: overlay;
+  scrollbar-width: auto;
+  scrollbar-color: rgb(207, 207, 207) rgba(0, 0, 0, 0);
 }
 
 ::-webkit-scrollbar {
@@ -72,6 +74,30 @@ body {
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
+}
+
+@media screen and (orientation: portrait) {
+  * {
+    font-size: calc(3vw + 4px);
+  }
+  h6 {
+    font-size: calc(3vw + 4px);
+  }
+  h5 {
+    font-size: calc(3.5vw + 8px);
+  }
+  h4 {
+    font-size: calc(4vw + 12px);
+  }
+  h3 {
+    font-size: calc(4.5vw + 16px);
+  }
+  h2 {
+    font-size: calc(5vw + 20px);
+  }
+  h1 {
+    font-size: calc(5.5vw + 24px);
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

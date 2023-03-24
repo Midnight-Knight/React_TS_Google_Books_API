@@ -27,7 +27,11 @@
 html
 {
   overflow-y: overlay;
+  scrollbar-width: auto;
+  scrollbar-color: $Gray rgba(0,0,0,0);
 }
+
+
 
 ::-webkit-scrollbar {
   width: 1vw; /* Ширина полосы */
@@ -81,4 +85,42 @@ body
 .App{
   @include FlexColumnFsCe();
   overflow: hidden;
+}
+
+@media screen and (orientation: portrait)
+{
+  *
+  {
+    font-size: calc(3vw + 4px);
+  }
+
+  h6
+  {
+    font-size: calc(1.5vw * 2 + 2px * 2);
+  }
+
+  h5
+  {
+    font-size: calc(1.75vw * 2 + 4px * 2);
+  }
+
+  h4
+  {
+    font-size: calc(2vw * 2 + 6px * 2);
+  }
+
+  h3
+  {
+    font-size: calc(2.25vw * 2 + 8px * 2);
+  }
+
+  h2
+  {
+    font-size: calc(2.5vw * 2 + 10px * 2);
+  }
+
+  h1
+  {
+    font-size: calc(2.75vw * 2 + 12px * 2);
+  }
 }

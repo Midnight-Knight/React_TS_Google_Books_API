@@ -17,4 +17,18 @@
   background: rgb(207, 207, 207);
 }
 
+@media screen and (orientation: portrait) {
+  #GridBooks {
+    padding-left: 6vw;
+    padding-right: 6vw;
+    margin-bottom: 5vw;
+    column-gap: 6vmin;
+    row-gap: 6vmin;
+    grid-template-columns: repeat(auto-fit, calc(120px + 42vmin));
+  }
+  #GridBooks > div {
+    width: calc(120px + 42vmin);
+  }
+}
+
 /*# sourceMappingURL=Grid.css.map */
