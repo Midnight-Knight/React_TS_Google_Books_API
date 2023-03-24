@@ -9,11 +9,6 @@ const API = axios.create({
     baseURL: API_URL,
 });
 
-export function get_api_start_index():number
-{
-    return API_START_INDEX+30;
-}
-
 // orderBy: relevance newest сортировка
 // subject: all(all "" default) art biography computers history medical poetry категория
 export const searchBooks:any = async (query: string = "js", subject:string = "", orderBy:string = "relevance", loadMore:boolean = false) => {
