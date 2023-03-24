@@ -12,11 +12,11 @@
   row-gap: 3vmin;
   align-content: center;
   grid-template-columns: repeat(auto-fit, calc(120px + 21vmin));
-  grid-template-rows: repeat(auto-fit, calc(240px + 21vmin + 10.5vmin));
+  grid-template-rows: repeat(auto-fit, auto);
   > div
   {
     width: calc(120px + 21vmin);
-    height: calc(240px + 21vmin + 10.5vmin);
+    height: auto;
     background: $Grayish_brown;
   }
 }

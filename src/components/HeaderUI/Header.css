@@ -62,7 +62,7 @@ header > div > div > #inputDiv > button {
 header > div > div > #inputDiv > button > div {
   width: 2vw;
   height: 2vw;
-  background-image: url("./../../svg/search-svgrepo-com.svg");
+  background-image: url("../../assets/search-svgrepo-com.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

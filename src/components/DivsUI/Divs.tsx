@@ -1,9 +1,10 @@
 import React from "react";
 import {Book} from "../../logic/Books/Books";
 import "./Divs.css";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {MyState} from "../../Reducer";
-
+import {UpdateUpdateBook} from "../../action";
+import imagineNo from "../../assets/free-icon-no-pictures-3875148.png";
 
 
 export const FoundResults:React.FC = () => {
@@ -24,15 +25,24 @@ export const FoundResults:React.FC = () => {
 };
 
 export const LoadMore:React.FC = () => {
+    const dispatch = useDispatch();
+    const boolean:boolean = true;
+    const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        const booleanLoadMore = {
+            boolean,
+        };
+        dispatch(UpdateUpdateBook(booleanLoadMore));
+    };
 
     return (
         <div id="LoadMore">
-            <button>Load More</button>
+            <button id="ButtonLoadMore" onClick={handleSubmit}>Load More</button>
         </div>
     );
 };
 export const BookCard:React.FC<Book> = (props) => {
-    let imgP:string = "./../../image/free-icon-no-pictures-3875148.png"
+    let imgP:any = imagineNo;
     if (props.image_book !== "")
     {
         imgP = props.image_book;
@@ -43,9 +53,9 @@ export const BookCard:React.FC<Book> = (props) => {
                 <img src={imgP} alt={"book_"+props.name_book}/>
             </div>
             <div>
-                <p className="categories">{props.categories && props.categories.length > 0 ? props.categories[0] : "Unknown category"}</p>
+                <p className="categories">{props.categories && props.categories.length > 0 ? props.categories[0] : ""}</p>
                 <h6 className="name_book">{props.name_book}</h6>
-                <p className="authors_book">{props.array_authors && props.array_authors.length > 0 ? props.array_authors.join(', ') : 'Unknown author'}</p>
+                <p className="authors_book">{props.array_authors && props.array_authors.length > 0 ? props.array_authors.join(', ') : ''}</p>
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./Header.css";
-import {searchBooks} from "../../logic/Books/BooksManager";
+import "./../../assets/search-svgrepo-com.svg";
 import { useDispatch } from "react-redux";
 import {updateData} from "../../action";
 
@@ -8,7 +8,6 @@ export const Header = () => {
     const [title,bookNameFunction] = useState<string>('js');
     const [category,categoryFunction] = useState<string>('all');
     const [sortBy,sortOrderFunction] = useState<string>('relevance');
-
     const dispatch = useDispatch();
 
     const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -21,6 +20,10 @@ export const Header = () => {
         };
 
         dispatch(updateData(searchParams));
+        let LoadMore:any = document.getElementById('ButtonLoadMore');
+        let BooksSection:any = document.getElementById('BooksSection');
+        LoadMore.style.opacity = '1';
+        BooksSection.style.position = 'static';
     };
 
     return (

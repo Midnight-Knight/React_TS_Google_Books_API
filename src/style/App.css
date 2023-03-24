@@ -9,13 +9,13 @@
 
 @font-face {
   font-family: "Playfair Display Italic";
-  src: url("./fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
   font-weight: auto;
   font-style: auto;
 }
 @font-face {
   font-family: "PTSasn-Bold";
-  src: url("./fonts/PTSans-Bold.ttf") format("truetype");
+  src: url("../fonts/PTSans-Bold.ttf") format("truetype");
   font-weight: auto;
   font-style: auto;
 }
@@ -47,8 +47,11 @@ h1 {
   font-size: calc(3vw + 12px);
 }
 
+body {
+  background: rgb(154, 121, 82);
+}
+
 .App {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

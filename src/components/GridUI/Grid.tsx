@@ -10,8 +10,10 @@ import {UpdateNumberOfResults} from "../../action";
 export const GridBooks:React.FC = () => {
         const [books, setBooks] = useState<Book[]>([]);
         const searchParams:any = useSelector((state: MyState) => state.data);
+        const booleanLoadMore:any = useSelector((state:MyState) => state.boolean);
         const [API_data, setAPI_data] = useState<any>(null);
-    const dispatch = useDispatch();
+        const dispatch = useDispatch();
+        const [booleanPushArr, booleanPushArrFunction] = useState<boolean>(false);
 
         useEffect(() => {
             if (!searchParams) {
@@ -22,7 +24,22 @@ export const GridBooks:React.FC = () => {
                 setAPI_data(data);
             }
             fetchBooks();
+            booleanPushArrFunction(false);
         }, [searchParams]);
+
+        useEffect(() => {
+            if (!booleanLoadMore)
+            {
+                return;
+            }
+
+            async function fetchBooks() {
+                const data = await searchBooks(searchParams.title,searchParams.category,searchParams.sortBy, true);
+                setAPI_data(data);
+            }
+            fetchBooks();
+            booleanPushArrFunction(true);
+        },[booleanLoadMore])
 
         useEffect(() => {
             if (!API_data) {
@@ -42,15 +59,28 @@ export const GridBooks:React.FC = () => {
                         }
                         )
                 }
-                setBooks(BookData);
-                const number:number = API_data.totalItems;
-                const numberParam = {
-                    number,
-                };
-
-                dispatch(UpdateNumberOfResults(numberParam));
+                console.log(booleanPushArr);
+                if (booleanPushArr === true)
+                {
+                    setBooks([...books,...BookData]);
+                }
+                else
+                {
+                    setBooks(BookData);
+                }
             }
         }, [API_data]);
+
+        useEffect(() => {
+            const number:number = books.length;
+            console.log(books.length);
+            const numberParam = {
+                number,
+            };
+
+            dispatch(UpdateNumberOfResults(numberParam));
+        }, [books])
+
         return (
             <div id="GridBooks">
                     {books.map((book:Book,index:number) => (

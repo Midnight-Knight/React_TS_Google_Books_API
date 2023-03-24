@@ -7,3 +7,7 @@ export interface Data {
 export interface NumberOfResults {
     number: number;
 }
+
+export interface UpdateBook {
+    boolean: boolean;
+}

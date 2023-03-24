@@ -1,4 +1,4 @@
-import {Data, NumberOfResults} from "./type";
+import {Data, NumberOfResults, UpdateBook} from "./type";
 
 export interface UpdateDataAction {
     type: 'UPDATE_DATA';
@@ -8,6 +8,11 @@ export interface UpdateDataAction {
 export interface UpdateNumberOfResultsAction {
     type: 'UPDATE_NUMBER_OF_RESULTS';
     payload: NumberOfResults;
+}
+
+export interface UpdateBookAction {
+    type: 'UPDATE_BOOK';
+    payload: UpdateBook;
 }
 
 export const updateData = (data: Data): UpdateDataAction => {
@@ -23,3 +28,10 @@ export const UpdateNumberOfResults = (number: NumberOfResults): UpdateNumberOfRe
         payload: number,
     };
 };
+
+export const UpdateUpdateBook = (boolean: UpdateBook): UpdateBookAction => {
+    return {
+        type: 'UPDATE_BOOK',
+        payload: boolean,
+    }
+}

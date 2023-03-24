@@ -2,6 +2,9 @@
 
 #BooksSection
 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
   z-index: 2;
   margin-top: calc(20vh + 12px);
   width: 100%;
