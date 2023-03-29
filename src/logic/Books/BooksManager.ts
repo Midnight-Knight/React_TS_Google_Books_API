@@ -3,6 +3,7 @@ const API_URL:string = "https://www.googleapis.com/books/v1/";
 const API_KEY:string = "AIzaSyDx-dY3gLgjWubHaZpAEh6l-iLSLNSDEKI";
 let API_START_INDEX:number = 0;
 let API_END_INDEX:number = 0;
+let response:any;
 
 // https://www.googleapis.com/books/v1/volumes?q=js&orderBy=relevance&key=AIzaSyDx-dY3gLgjWubHaZpAEh6l-iLSLNSDEKI&startIndex=0&maxResults=30
 const API = axios.create({
@@ -46,9 +47,18 @@ export const searchBooks:any = async (query: string = "js", subject:string = "",
             STR_URL += (query + '&orderBy=' + orderBy + '&key=' + API_KEY + '&startIndex=' + API_START_INDEX + '&maxResults=' + max_results);
             break;
     }
-    const response = await API.get(STR_URL);
-    API_END_INDEX = response.data.totalItems;
-    return response.data;
+    try{
+        response = await API.get(STR_URL);
+        API_END_INDEX = response.data.totalItems;
+        response = response.data;
+    }
+    catch (error)
+    {
+        response = await searchBooks(query,subject,orderBy,loadMore);
+    }
+    finally {
+        return response;
+    }
 };
 
 
